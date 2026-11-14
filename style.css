@@ -1,0 +1,330 @@
+/* --- Styles Généraux & Modernes --- */
+:root {
+    --primary-color: #006699;
+    --text-color: #212529;
+    --bg-color: #ffffff;
+    --accent-red: #ff3333;
+    --light-bg: #f8f9fa;
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.site-header, .site-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    margin-bottom: 2rem;
+}
+
+.main-nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
+}
+
+/* --- Conteneur Principal & Grille Responsive --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem 1.5rem;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Typographie & Titres --- */
+h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-family: Georgia, serif;
+    margin: 0;
+}
+
+.quote-text {
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+    background: var(--light-bg);
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.author {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.3rem;
+}
+
+.highlight-title {
+    color: var(--accent-red);
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitle-red {
+    color: var(--accent-red);
+    font-size: 1.2rem;
+}
+
+.small-note {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Images & Vidéos Responsives --- */
+img.responsive-img {
+    width: 70%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    background: #000;
+    border-radius: 6px;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Éléments Interactifs & Boutons --- */
+.hidden-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-red);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    text-decoration: underline;
+    margin: 0.5rem 0;
+}
+
+.btn-toggle:hover {
+    color: #000;
+}
+
+.link-btn {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.separator-space {
+    margin: 2rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Styles Améliorés pour l'Agenda --- */
+.agenda-year-section {
+    margin-bottom: 3.5rem;
+}
+
+.agenda-city {
+    color: var(--accent-red); /* Utilise la couleur rouge définie dans vos variables */
+    font-weight: bold;
+}
+
+.agenda-year-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.agenda-year-header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.agenda-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+    border: 1px solid #eaeaea;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.agenda-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef; /* Ligne de séparation nette entre chaque date */
+    transition: background-color 0.2s ease;
+}
+
+/* Supprime la bordure sur le dernier élément de la liste */
+.agenda-item:last-child {
+    border-bottom: none;
+}
+
+/* Effet au survol de la souris pour un meilleur confort de lecture */
+.agenda-item:hover {
+    background-color: var(--light-bg);
+}
+
+.agenda-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.agenda-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.agenda-city {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.agenda-dept {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.agenda-venue {
+    color: #495057;
+}
+
+.agenda-time {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+    .agenda-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: 1rem;
+    }
+
+    .agenda-date {
+        width: 100%;
+        border-bottom: 1px dashed #dee2e6;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .agenda-time {
+        margin-left: 0;
+        margin-top: 0.3rem;
+    }
+}
+}
+
+/* Adaptation Mobile */
+@media (max-width: 700px) {
+    .agenda-table .col-headers {
+        display: none;
+    }
+
+    .agenda-table tbody tr {
+        display: block;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid #dfe3e8;
+    }
+
+    .agenda-table td {
+        display: block;
+        width: 100%;
+        padding: 0.2rem 0;
+        border: none;
+        text-align: left;
+    }
+
+    .col-time {
+        text-align: left;
+    }
+}
+/* --- Forcer la couleur rouge pour toutes les villes de l'agenda --- */
+.agenda-details .agenda-city {
+    color: var(--accent-red) !important;
+    font-weight: bold;
+}
