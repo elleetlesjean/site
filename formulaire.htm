@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elle et les Jean - Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="main-nav">
+ <a href="index.html">ACCUEIL</a>
+                <a href="agenda.html">AGENDA</a>
+                <a href="info.html">INFOS</a>
+                <a href="live.html">VIDÉO</a>
+                <a href="formulaire.html">CONTACT</a>
+                <a href="presse.html">PRESSE</a>
+                <a href="doc.html">ORGANISATEURS</a>
+    </nav>
+  </header>
+
+  <main class="container" style="text-align: center;">
+    <div class="content-card" style="max-width: 600px; margin: 2rem auto;">
+      <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Pour nous joindre</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+        <strong>E-mail :</strong> <a href="mailto:bbkiss@free.fr" class="link-btn">bbkiss@free.fr</a>
+      </p>
+      <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Téléphone :</strong></p>
+      <p style="font-size: 1rem; margin-bottom: 0.5rem;">Jean-Louis : <a href="tel:0689056048" class="link-btn">06 89 05 60 48</a></p>
+      <p style="font-size: 1rem;">Jean-Luc : <a href="tel:0649093342" class="link-btn">06 49 09 33 42</a></p>
+      <p style="font-size: 1rem;">ou utilisez le formulaire ci-dessous.&nbsp;</p>
+    </div>
+  </main>
+	
+	<!-- modify this form HTML and place wherever you want your form -->
+<style>
+  .form-container {
+    max-width: 600px; /* Largeur confortable */
+    margin: 50px auto; /* Centre le bloc horizontalement avec de l'espace en haut/bas */
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-container label {
+    display: block;
+    font-size: 18px; /* Texte des libellés plus grand */
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+    padding: 14px; /* Champs plus hauts et spacieux */
+    font-size: 18px; /* Texte saisi plus grand */
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Évite que les champs dépassent du cadre */
+  }
+
+  .form-container input:focus,
+  .form-container textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  }
+
+  .form-container button {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px; /* Bouton imposant */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .form-container button:hover {
+    background-color: #0052a3;
+  }
+</style>
+
+<div class="form-container">
+  <form action="https://formspree.io/f/xbgogype" method="POST">
+    <div class="form-group">
+      <label for="name">Votre nom :</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Votre email :</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Votre message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <!-- Champ invisible anti-spam -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+  <footer class="site-footer">
+    <nav class="main-nav">
+    <a href="index.html">ACCUEIL</a>
+                <a href="agenda.html">AGENDA</a>
+                <a href="info.html">INFOS</a>
+                <a href="live.html">VIDÉO</a>
+                <a href="formulaire.html">CONTACT</a>
+                <a href="presse.html">PRESSE</a>
+                <a href="doc.html">ORGANISATEURS</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
